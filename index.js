@@ -23,8 +23,6 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
 
-    // await client.connect();
-
     const foodCollection = client.db('foodDB').collection('food');
     const userCollection = client.db('foodDB').collection('user');
     const newFoodCollection = client.db('foodDB').collection('request');
@@ -91,7 +89,6 @@ async function run() {
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
-
 
   }
 }
